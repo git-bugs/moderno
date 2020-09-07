@@ -1,0 +1,23 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background-color: grey;
+    text-align: center;
+}
+.box{
+    display: flex;
+    transition: all .3s;
+    animation: name infinite;
+}
+.header{
+    background-color: #ccc;
+}
