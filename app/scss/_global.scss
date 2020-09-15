@@ -2,6 +2,11 @@ html{
     box-sizing: border-box;
 }
 
+html,
+body{
+    height: 100%;
+}
+
 *,
 *::before,
 *::after{
@@ -55,7 +60,53 @@ body{
     margin-bottom: 30px;
 }
 
+.page-content{
+    background-color: $grey;
+}
+
 .rate-star{
     display: inline-block;
     margin-right: 13px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex: 0 0 auto;
+  }
+
+.breadcrumbs{
+      &__inner{
+          padding: 45px 0 40px;
+      }
+      &__list{
+          li{
+              display: inline-block;
+              position: relative;                           
+              & + li{
+                  padding-left: 24px;
+                  &::before{
+                    content: '-';
+                    left: 8px;
+                    position: absolute;
+                    color: $green;
+                  }
+              }
+              &:last-child{
+                  a,
+                  span{
+                      color: $bg;
+                  }
+              }
+          }
+          a{
+              color: #b0bec5;
+          }
+      }
 }
